@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom'
 // import styled from '@emotion/styled'
 import styled from '@xstyled/emotion'
 
-const Bar = styled.div({
+const Bar = styled.box({
   background: 'blue',
   width: 50,
   height: 50
 })
 
-const Foo = styled.div({
+const Foo = styled.box({
   padding: 10,
   margin: 10,
   background: 'red',
