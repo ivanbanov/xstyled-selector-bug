@@ -4,7 +4,6 @@ module.exports = api => {
   return {
     presets: [
       '@babel/preset-react',
-      // '@emotion/babel-preset-css-prop',
       '@xstyled/babel-preset-emotion-css-prop',
     ],
     'plugins': [

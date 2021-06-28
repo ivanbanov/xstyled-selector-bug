@@ -1,31 +1,34 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-// import styled from '@emotion/styled'
-import styled from '@xstyled/emotion'
+import styled, { ThemeProvider } from '@xstyled/emotion'
 
-const Bar = styled.box({
-  background: 'blue',
+const Bar = styled.div({
+  background: 'info',
   width: 50,
   height: 50
 })
 
-const Foo = styled.box({
+const Foo = styled.div({
   padding: 10,
   margin: 10,
-  background: 'red',
+  backgroundColor: 'error',
   width: 50,
   height: 50,
   [Bar]: {
-    background: 'yellow',
+    backgroundColor: 'success',
   }
 })
 
 const App = () => (
-  <div>
+  <ThemeProvider theme={{ colors: {
+    error: 'red',
+    success: 'green',
+    info: 'blue',
+  }}}>
     <Foo>
-      <Bar />
+      <Bar background='info' />
     </Foo>
-  </div>
+  </ThemeProvider>
 )
 
 const rootEl = document.querySelector('#root')
